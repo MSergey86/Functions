@@ -1,13 +1,9 @@
-export function healthHero (hero) {
-    let result = "";
-      if (hero.health > 50) {
-        result = "healthy";
+export function healthHero ({health}) {
+      if (health > 50) {
+        return "healthy";
       }
-      else if (hero.health < 15) {
-        result = "critical";
+      if (health < 15) {
+        return "critical";
       }
-      else {
-        result = "wounded";
-      }
-      return result;
+        return "wounded";
 }
